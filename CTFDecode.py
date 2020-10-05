@@ -22,12 +22,14 @@ def main(argv):
             # print(type(opt_type))
             exit()
         if opt_name in ('--basedecode'):
-            print(opt_type)
+            # print(opt_type)
+            Result = DecodeBase(opt_type)
+            Result.Decode()
+            # print(opt_type)
             exit()
         printHelp()
         exit()
     # print(argv)
-
 if __name__ == "__main__":
    main(sys.argv[1:])
 

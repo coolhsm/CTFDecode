@@ -1,7 +1,8 @@
 import re
+import base64
 class ScanBaseType:
-    def __init__(self,BaseString):
-        self.BaseString  =BaseString
+    def __init__(self,baseEncodeStr):
+        self.BaseString  =baseEncodeStr
         # print(self.BaseEncodeString)
     # def detail(self):
     #     print(self.BaseString)
@@ -44,6 +45,80 @@ class ScanBaseType:
 # print(a)
 # https://blog.csdn.net/MikeCoke/article/details/105512385
 
-class BaseDecode:
-    def __init__(self,):
+class DecodeBase:
+    def __init__(self,baseEncodeStr):
+        self.baseEncodeStr = baseEncodeStr
+    def base16Decode(self):
+        return base64.b16decode(self.baseEncodeStr)
+    def base32Decode(self):
+        return base64.b32decode(self.baseEncodeStr)
+    def base36Decode(self):
+    # return base64.b36decode(self.baseEncodeStr)
         pass
+    def base58Decode(self):
+        return base64.b58decode(self.baseEncodeStr)
+
+    def base62Decode(self):
+        # return base64.b32decode(self.baseEncodeStr)
+        pass
+
+    def base64Decode(self):
+        return base64.b64decode(self.baseEncodeStr)
+    def base91Decode(self):
+        # return base64.b91decode(self.baseEncodeStr)
+        pass
+    def base92Decode(self):
+        # return base64.b92decode(self.baseEncodeStr)
+        pass
+    def base85Decode(self):
+        return base64.b85decode(self.baseEncodeStr)
+    def Decode(self):
+        baseType = ScanBaseType(self.baseEncodeStr)
+        Result = baseType.check()
+        if 'base16' in Result:
+            try:
+                print(base64.b16decode(self.baseEncodeStr))
+            except:
+                exit()
+        if 'base32' in Result:
+            try:
+                print(base64.b32decode(self.baseEncodeStr))
+            except:
+                exit()
+        if 'base36' in Result:
+            try:
+                print("base36")
+                pass
+            except:
+                exit()
+        if 'base58' in Result:
+            try:
+            # base64.bdecode()
+                pass
+            except:
+                exit()
+        if 'base62' in Result:
+            # base64.b16encode()
+            try:
+                pass
+            except:
+                exit()
+        if 'base64' in Result:
+            try:
+                print("base64:\t",end='')
+                print(base64.b64decode(self.baseEncodeStr))
+            except:
+                exit()
+        if 'base91' in Result:
+            try:
+                pass
+            except:
+                exit()
+            # base64.b91decode()
+        if 'base92' in Result:
+            try:
+                pass
+            except:
+                exit()
+
+        print(Result)
