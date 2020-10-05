@@ -11,12 +11,8 @@ def printHelp():
     print("\t-b\t--baseCheck    查询可能使用过的Base编码类型")
     print("\t--basedecode\tbase家族解密")
     print("\t-h\t--help\thelp")
-    # print("------")
-
 def main(argv):
     opts,args = getopt.getopt(argv,'-h-b:',['help','filename=','basedecode='])
-    # print(opts)
-    # print(args)
     for opt_name,opt_type in opts:
         if opt_name in ('-h','--help'):
            printHelp()
