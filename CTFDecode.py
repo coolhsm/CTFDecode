@@ -1,8 +1,7 @@
 #! /usr/bin/env python3
 import sys
 import getopt
-from Base.scanBaseType import ScanBaseType
-from Base.baseDecode import BaseDecode
+from lib.Base import *
 def printHelp():
     print(" Power For HSM")
     print("NAME: \n   CTFDecode\t A powerful decoding tool\tPower By HSM\n\n")

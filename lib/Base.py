@@ -1,6 +1,5 @@
 import re
 class ScanBaseType:
-
     def __init__(self,BaseString):
         self.BaseString  =BaseString
         # print(self.BaseEncodeString)
@@ -43,7 +42,8 @@ class ScanBaseType:
 # obj1  = ScanBaseType(string)
 # a = obj1.check()
 # print(a)
-
-
-
 # https://blog.csdn.net/MikeCoke/article/details/105512385
+
+class BaseDecode:
+    def __init__(self,):
+        pass
