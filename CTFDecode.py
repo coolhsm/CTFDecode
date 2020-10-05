@@ -24,7 +24,9 @@ def main(argv):
         if opt_name in ('--basedecode'):
             # print(opt_type)
             Result = DecodeBase(opt_type)
-            Result.Decode()
+            # Result.Decode()
+            a = Result.decode()
+            print(a)
             # print(opt_type)
             exit()
         printHelp()
