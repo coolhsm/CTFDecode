@@ -1,13 +1,14 @@
 import sys
 import getopt
-import scanBaseType
+from Base.scanBaseType import ScanBaseType
+
 def printHelp():
     print("CTFDecode Power For HSM")
     print("CTFDecode help List")
     print("------")
+    print("-b    --baseCheck    base Type Check")
     print("-b64    --base64    base64 Decode")
-    print("-b64    --base64    base64 Decode")
-    print("-b64    --base64    base64 Decode")
+    print("-h    --help    help")
 
     print("------")
 
@@ -18,7 +19,11 @@ def main(argv):
     for opt_name,opt_type in opts:
         if opt_name in ('-h','--help'):
            printHelp()
+        if opt_name in ('-b'):
+            TypeResult = ScanBaseType(opt_type)
 
+            print(TypeResult.check())
+            # print(type(opt_type))
     # print(argv)
 
 if __name__ == "__main__":
