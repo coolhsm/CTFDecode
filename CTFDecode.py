@@ -5,7 +5,6 @@ from lib.Base import *
 def printHelp():
     print(" Power For HSM")
     print("NAME: \n   CTFDecode\t A powerful decoding tool\tPower By HSM\n\n")
-    print("DESCRIPTION:\t由JJUSEC团队HSM编写的用于CTF比赛的解码工具\n")
     print("\nOPTIONS:\n")
     print("\t-b\t--baseCheck    查询可能使用过的Base编码类型")
     print("\t--basedecode\tbase家族解密")
