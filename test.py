@@ -1,4 +1,9 @@
 import base64
+import base36
+a = base36.dumps(1223412341234)
+b = base36.loads('bv6h3')
+print(b)
+print(a)
 find_decode = lambda d , data : eval(f'base64.{d}({data})')
 print(find_decode)
 def decode(data):

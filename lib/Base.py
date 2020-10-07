@@ -1,5 +1,6 @@
 import re
 import base64
+import base36
 class ScanBaseType:
     def __init__(self,baseEncodeStr):
         self.BaseString  =baseEncodeStr
@@ -66,12 +67,14 @@ class DecodeBase:
                         return f'Decoded String is: {chars.decode("utf-8")}\nEncrypet was used is: {i:3}'
                 except:
                     pass
+
     def Decode(self):
         baseType = ScanBaseType(self.baseEncodeStr)
         Result = baseType.check()
         if 'base36' in Result:
             try:
-                print("base36")
+                print("base36:",end='')
+                print(base36.loads(self.baseEncodeStr))
                 pass
             except:
                 pass
@@ -98,5 +101,4 @@ class DecodeBase:
                 pass
             except:
                 pass
-
         print(Result)
